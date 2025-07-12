@@ -1,0 +1,178 @@
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-image: url("./bg.svg"), linear-gradient(55deg, #200838 0%, #151226 60%, #2D1C5B 100%);
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper{
+
+    width: 40rem;
+}
+
+.wrapper p{
+    color: rgba(255, 255, 255, 0.478);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btn:hover{
+    transform: scale(1.2);
+    transition: transform 0.5s ease;
+    background: #0000001c;
+    border-color: #aa78dd;
+    
+    box-shadow: #4d2caa6e;
+}
+
+section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    margin-top: 6rem;
+}
+
+.headding{
+    color: #f3f3f3a1;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.175rem;
+    width: 100%;
+    font-size: 2.5em;
+    line-height: 1.125;
+    font-weight: 500;
+}
+
+/* === Hero Section === */
+.hero {
+    position: relative;
+    height: 100vh;
+    padding: 25vw;
+    background: url('PLACEHOLDER_HERO_BG.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.103);
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.hero p.lead {
+    color: #ffffff8f;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.hero .btn-primary {
+    background-color: #ff5722;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1.2rem;
+    transition: background 0.3s;
+}
+
+.hero .btn-primary:hover {
+    background-color: #e64a19;
+}
+
+/* === Logo Strip === */
+.logo-strip {
+    background-color: #11111123;
+}
+
+.logo-strip img {
+    opacity: 0.75;
+    transition: opacity 0.3s;
+}
+
+.logo-strip img:hover {
+    opacity: 1;
+}
+
+/* === Features Section === */
+.feature-icon {
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+/* === Testimonial Section === */
+.testimonial {
+    font-style: italic;
+    position: relative;
+    padding: 2rem;
+    border-radius: 8px;
+    background: rgba(245, 245, 245, 0.5);
+}
+
+.testimonial::before {
+    content: '“';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 4rem;
+    color: rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    font-size: 1.125rem;
+}
+
+/* === CTA Section === */
+.cta {
+    background-color: #f8f9fa;
+}
+
+.cta .btn-primary {
+    background-color: #ff5722;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1.2rem;
+    transition: background 0.3s;
+}
+
+/* === Footer === */
+footer {
+    background-color: #00000031;
+    color: #ccc;
+    padding: 3rem 0;
+}
+
+footer a {
+    color: #ff5722;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .logo-strip img {
+        height: 40px;
+    }
+}
