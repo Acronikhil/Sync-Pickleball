@@ -13,22 +13,22 @@ a {
     text-decoration: none;
 }
 
-.wrapper{
+.wrapper {
 
     width: 40rem;
 }
 
-.wrapper p{
+.wrapper p {
     color: rgba(255, 255, 255, 0.478);
     font-family: 'Open Sans', sans-serif;
 }
 
-.btn:hover{
+.btn:hover {
     transform: scale(1.2);
     transition: transform 0.5s ease;
     background: #0000001c;
     border-color: #aa78dd;
-    
+
     box-shadow: #4d2caa6e;
 }
 
@@ -38,14 +38,18 @@ section {
     margin-top: 6rem;
 }
 
-.headding{
-    color: #f3f3f3a1;
+.headding {
+    /* color: #f3f3f3a1; */
     font-family: 'Montserrat', sans-serif;
     letter-spacing: -0.175rem;
     width: 100%;
     font-size: 2.5em;
     line-height: 1.125;
     font-weight: 500;
+    background: linear-gradient(red, blue);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* === Hero Section === */
@@ -175,4 +179,28 @@ footer a:hover {
     .logo-strip img {
         height: 40px;
     }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.hidden {
+    display: none;
+}
+
+.calendarBox {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
 }
