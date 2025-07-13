@@ -1,3 +1,8 @@
+:root {
+    --bg-color: #aa78dd;
+    --border: #5F476B;
+}
+
 * {
     scroll-behavior: smooth;
 }
@@ -23,14 +28,104 @@ a {
     font-family: 'Open Sans', sans-serif;
 }
 
-.btn:hover {
-    transform: scale(1.2);
-    transition: transform 0.5s ease;
-    background: #0000001c;
-    border-color: #aa78dd;
-
-    box-shadow: #4d2caa6e;
+.btn {
+    border: solid 1px var(--border);
+    font-weight: normal;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
 }
+
+.btn:hover {
+    transform: scale(1.1);
+    transition: transform 0.5s ease-in-out;
+    background: #0000001c;
+    border-color: var(--bg-color) !important;
+
+    box-shadow: 0 0px 15px -5px #875ff3de;
+
+}
+
+.bi {
+    color: var(--border) !important;
+}
+
+.h1 {
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.175rem;
+    width: 100%;
+    /* font-size: 3em; */
+    line-height: 1.125;
+    font-weight: 500;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.412) 0%, #FFFFFF 67%);
+    --webkit-background-clip: text;
+    --webkit-text-fill-color: transparent;
+}
+
+/* Glowing card on hover only */
+.glow-card {
+    /* border-radius: 35px; */
+    border: solid 1px var(--bg-color);
+    padding: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.glow-card:hover {
+    /* background: linear-gradient(45deg, #ff0057, #00c3ff, #fffd44, #ff0057); */
+    background-size: 300% 300%;
+    animation: borderColorChange 1s alternate-reverse infinite ease-in-out;
+}
+
+/* Card content inside */
+.glow-card-inner {
+    background: #ffffff34;
+    border-radius: 30px;
+    height: 100%;
+}
+
+/* Gradient animation */
+@keyframes borderColorChange {
+    0% {
+        border-color: #511268;
+    }
+
+    25% {
+        border-color: #521269;
+    }
+
+    50% {
+        border-color: #7a3394;
+    }
+
+    75% {
+        border-color: #9f79a7;
+    }
+
+    100% {
+        border-color: #CCB3D1;
+    }
+}
+
+/* Optional: maintain image proportions */
+.object-fit-cover {
+    object-fit: cover;
+    height: 100%;
+}
+
+.custom-card {
+    max-width: 700px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.custom-card .object-fit-cover {
+    object-fit: cover;
+    height: 100%;
+}
+
 
 section {
     padding-top: 4rem;
@@ -38,7 +133,7 @@ section {
     margin-top: 6rem;
 }
 
-.headding {
+h1 {
     /* color: #f3f3f3a1; */
     font-family: 'Montserrat', sans-serif;
     letter-spacing: -0.175rem;
@@ -46,10 +141,25 @@ section {
     font-size: 2.5em;
     line-height: 1.125;
     font-weight: 500;
-    background: linear-gradient(red, blue);
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.412) 0%, #FFFFFF 100%);
     -webkit-background-clip: text;
-            background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.active {
+    background-color: #00000009 !important;
+    border-color: #d4d3d6 !important;   
+}
+
+.ai{
+    color: #d4d3d6 !important;
+}
+
+p {
+    max-width: 60vw;
+    color: rgba(255, 255, 255, 0.478);
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* === Hero Section === */
@@ -203,4 +313,26 @@ footer a:hover {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
+}
+
+.card-3d {
+    perspective: 1000px;
+}
+
+.card-inner {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.card-3d:hover .card-inner {
+    transform: rotateY(5deg) rotateX(5deg) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card-3d img {
+    transition: transform 0.3s ease;
+}
+
+.card-3d:hover img {
+    transform: scale(1.1);
 }
