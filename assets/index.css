@@ -136,6 +136,7 @@ a {
 /* Glowing card on hover only */
 .glow-card {
     /* border-radius: 35px; */
+    /* margin: 10px; */
     border: solid 1px var(--bg-color);
     padding: 4px;
     transition: all 0.3s ease-in-out;
@@ -236,7 +237,7 @@ p {
 .hero {
     position: relative;
     height: 100vh;
-    padding: 25vw;
+    padding: 25vw - 10px;
     background: url('PLACEHOLDER_HERO_BG.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
@@ -366,7 +367,7 @@ footer a:hover {
     top: 0;
     left: 0;
     height: 100vh;
-    width: 100vw;
+    width: 100vw - 10px;
     background: rgba(0, 0, 0, 0.6);
     display: flex;
     align-items: center;
@@ -460,14 +461,22 @@ footer a:hover {
   position: fixed;
   top: 0;
   left: 0;
-  width: 60px;
+  width: 25px;
   pointer-events: none;
   z-index: -1;
-  opacity: 0.9;
+  opacity: 0.5;
+  filter: blur(4px) brightness(1);
 }
 
 #pickleball-shadow {
   filter: blur(15px) brightness(0.5); /* dark blurry shadow */
-  transform: scale(1.1);
+  /* transform: scale(1.1); */
   z-index: -2; /* behind the ball */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%) scale(1.1); /* Adjust position */
+
+}
+
+section{
+    max-width: 100%;
 }

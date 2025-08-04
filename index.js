@@ -1,7 +1,5 @@
 import anime from "https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.es.js";
 
-
-
 function toggleCalendar() {
   document.getElementById("calendarOverlay").classList.remove("hidden");
 }
@@ -23,11 +21,11 @@ document.addEventListener("mousemove", (e) => {
 });
 
 gsap.ticker.add(() => {
-  angle += 8;
+  angle += 5;
 
   // Ball (with rotation)
   gsap.to(ball, {
-    duration: 0.2,
+    duration: 0.9,
     x: mouseX,
     y: mouseY,
     rotation: angle,
@@ -38,9 +36,9 @@ gsap.ticker.add(() => {
 
   // Shadow (no rotation, lower Y)
   gsap.to(shadow, {
-    duration: 0.2,
+    duration: 0.9,
     x: mouseX,
-    y: mouseY + 20, // shift down
+    y: mouseY + 2, // shift down
     scale: 1.1,
     ease: "power1.out",
     overwrite: true,
