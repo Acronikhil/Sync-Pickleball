@@ -59,6 +59,7 @@ a {
     position: relative;
     z-index: 1;
     border-radius: 50%;
+    max-width: min-content;
     /* or your shape */
 }
 

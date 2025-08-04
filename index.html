@@ -115,7 +115,7 @@
               class="card-body d-flex flex-column align-items-center gap-3 h-100 p-4 text-md-start text-center w-100"
             >
               <h1 class="card-title">Serve, Sip, and Socialize!</h1>
-              <p class="card-text">
+              <p class="card-text animated-card-text">
                 Recharge with tasty treats and refreshing drinks. The perfect
                 spot to relax and share stories. Sip, snack, and chat in a
                 cutesy café that’s made for post-match banter and pre-game
@@ -153,7 +153,7 @@
               class="card-body d-flex align-items-center flex-column gap-3 h-100 p-4 text-md-start text-center w-100"
             >
               <h1 class="card-title">Courts Crafted for Champions</h1>
-              <p class="card-text">
+              <p class="card-text animated-card-text">
                 Built for bold moves and smooth landings. With 8-layer
                 cushioning and tournament-grade bounce, our courts are built for
                 serious play and smooth rallies. Aesthetic enough to flex on
@@ -181,18 +181,20 @@
           <div
             class="card seperator h-100 bg-transparent border-0"
           >
-            <img
-              src="./assets/images/image03.jpg"
-              class="card-img-top rounded-4"
-              style="object-fit: cover; height: 250px"
-            />
+            <div class="d-flex justify-content-center align-items-center">
+              <img
+                src="./assets/images/image03.jpg"
+                class="card-img-top rounded-4"
+                style="object-fit: cover; height: 250px"
+              />
+            </div>
             <div
               class="card-body d-flex flex-column align-items-center"
             >
-              <h1 class="my-5">
+              <h1 class="my-5 animated-header">
                 Pro Shop,<br /><span class="fw-light">On Point</span>
               </h1>
-              <p class="card-text mt-3">
+              <p class="card-text mt-3 animated-para">
                 From the freshest paddles to the slickest apparel, score
                 must-have gear and level up your game. No detours. No fuss. Just
                 grab what feels right and get back in the zone.
@@ -206,21 +208,23 @@
           <div
             class="card seperator h-100 bg-transparent border-0 border-start border-light ps-4"
           >
+          <div class="d-flex justify-content-center align-items-center">
             <img
               src="./assets/images/image04.jpg"
               class="card-img-top rounded-4"
               style="object-fit: cover; height: 250px"
             />
+            </div>
             <div
               class="card-body d-flex flex-column align-items-center"
             >
-              <h1 class="my-5">
+              <h1 class="my-5 animated-header">
                 Indoor <span class="fw-light">Comfort,</span><br /><span
                   class="fw-light"
                   >Outdoor Feels</span
                 >
               </h1>
-              <p class="card-text mt-3">
+              <p class="card-text mt-3 animated-para">
                 Enjoy the best of both worlds. Fresh air, zero glare. Whether it
                 shines or pours, the court's all yours.
               </p>
@@ -232,18 +236,20 @@
         <div class="col-lg-4 col-md-6 col-12">
           <div
             class="card seperator last h-100 bg-transparent border-0 border-start ps-4"          >
+            <div class="d-flex justify-content-center align-items-center">
             <img
               src="./assets/images/image05.jpg"
               class="card-img-top rounded-4"
               style="object-fit: cover; height: 250px"
             />
+            </div>
             <div
               class="card-body d-flex flex-column align-items-center"
             >
-              <h1 class="my-5">
+              <h1 class="my-5 animated-header">
                 Pull Up,<br /><span class="fw-light">Hang Out</span>
               </h1>
-              <p class="card-text mt-3">
+              <p class="card-text mt-3 animated-para">
                 Green pockets and hangout zones to unwind, connect, or simply do
                 nothing (and love it). And spacious parking—because stressing
                 about it isn’t on today’s to-do list.
@@ -276,7 +282,7 @@
               class="card-body d-flex align-items-center flex-column gap-3 h-100 p-4 text-md-start text-center w-100"
             >
               <h1 class="card-title">Feel The Vibe, Join The Tribe!</h1>
-              <p class="card-text">
+              <p class="card-text animated-card-text">
                 Tournaments, mixers, theme nights, and more. We bring people
                 together, you just bring the energy. Dive into the action, meet
                 new friends, and soak up the atmosphere.
@@ -307,7 +313,7 @@
           Play Hard,<br />
           Chill Harder!
         </h1>
-        <p class="text-center" data-aos="fade-down">
+        <p class="text-center" data-aos="fade-down" data-aos-duration="1200">
           Join the pickleball party! All levels welcome—grab your spot now!
         </p>
         <a
@@ -374,18 +380,34 @@
         document.querySelectorAll(".card-title").forEach((h1) => {
           h1.setAttribute("data-aos", "fade-up");
         });
-        document.querySelectorAll(".img-fluid").forEach((h1) => {
-          h1.setAttribute("data-aos", "zoom-in-down");
-          h1.setAttribute("ata-aos-anchor-placement", "center-bottom");
-          h1.setAttribute("data-aos-duration", "4000");
-          
+        document.querySelectorAll(".animated-card-text").forEach((text) => {
+          text.setAttribute("data-aos", "flip-up");
+          text.setAttribute("data-aos-delay", "100");
+          text.setAttribute("data-aos-duration", "1250");
         });
+        document.querySelectorAll(".card-img-top").forEach((img) => {
+          img.setAttribute("data-aos", "zoom-in-up");
+        });
+        document.querySelectorAll(".animated-header").forEach((h) => {
+          h.setAttribute("data-aos", "fade-down");
+          h.setAttribute("data-aos-duration", "850");
+        });
+        document.querySelectorAll(".animated-para").forEach((p) => {
+          p.setAttribute("data-aos", "fade-up");
+          p.setAttribute("data-aos-duration", "900");
+        });
+        // document.querySelectorAll(".img-fluid").forEach((h1) => {
+        //   h1.setAttribute("data-aos", "zoom-in-down");
+        //   h1.setAttribute("data-aos-anchor-placement", "center-bottom");
+        //   h1.setAttribute("data-aos-duration", "4000");
+          
+        // });
         AOS.init({
           duration: 800,
           offset: 100,
           once: false, // allow animations to happen every scroll
           mirror: true, // enable reverse (mirror) animation on scroll up
-          // anchorPlacement: "top-centre",
+          anchorPlacement: "center-center",
           easing: "ease-in-out-back",
         });
       });
