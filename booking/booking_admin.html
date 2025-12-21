@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Court Admin Dashboard</title>
+    <link rel="stylesheet" href="./booking.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body style="display: flex; flex-direction: column; padding: 30px;">
+    
+    <!-- Admin Login Section -->
+    <div class="admin-section" style="margin-top: 40px; text-align: center;">
+        <button id="admin-login-btn" class="btn admin-btn" onclick="showAdminLogin()">Admin Login</button>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div id="admin-modal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Admin Login</h3>
+            <input type="text" id="admin-username" placeholder="Username" value="admin">
+            <input type="password" id="admin-password" placeholder="Password">
+            <div class="modal-buttons">
+                <button onclick="adminLogin()" class="btn">Login</button>
+                <button onclick="closeAdminModal()" class="btn cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="containerAd">
+        
+        <div>
+            <h1>🎾 Court Slot Booking</h1>
+
+            <!-- Date and Court Selection -->
+            <div class="date-picker">
+                <label for="booking-date">Choose Date:</label>
+                <input type="date" id="booking-date" name="booking-date" required>
+            </div>
+
+            <div class="court-picker">
+                <label for="court">Select Court:</label>
+                <select id="court" name="court">
+                    <option value="Court 1">Court 1</option>
+                    <option value="Court 2">Court 2</option>
+                    <option value="Court 3">Court 3</option>
+                </select>
+            </div>
+
+            <!-- Time Slots Container -->
+            <div class="time-slot-container">
+                <p>Please select a date to view available time slots.</p>
+            </div>
+
+            <!-- User Bookings Table -->
+            <div class="booked-slots-container">
+                <h2>My Bookings</h2>
+                <table id="booked-slots-table">
+                    <thead>
+                        <tr>
+                            <th>Court</th>
+                            <th>Date</th>
+                            <th>Start Time</th>
+                            <th>End Time</th> <!-- new -->
+                            <th>Duration</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Confirmation Modal -->
+        <div id="confirmation-modal" class="modal hidden">
+            <div class="modal-content">
+                <h3>Confirm Booking</h3>
+                <p id="selected-slot">You selected: [Slot] on [Date]</p>
+                <p>Please confirm your booking:</p>
+                <div class="modal-buttons">
+                    <button id="confirm-btn" class="btn">Confirm Booking</button>
+                    <button id="cancel-btn" class="btn cancel">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cancel Booking Modal -->
+        <div id="cancel-modal" class="modal hidden">
+            <div class="modal-content">
+                <h3>Cancel Booking</h3>
+                <p id="cancel-slot-message">Do you want to cancel this booking?</p>
+                <div class="modal-buttons">
+                    <button id="confirm-cancel-btn" class="btn cancel">Yes, Cancel</button>
+                    <button id="close-cancel-btn" class="btn">Keep Booking</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Admin Dashboard (Hidden by default) -->
+    <div id="admin-dashboard" class="admin-dashboard hidden">
+        <h2>Admin Dashboard</h2>
+        <div class="admin-stats">
+            <div class="stat-card">
+                <h4>Total Bookings</h4>
+                <span id="total-bookings">0</span>
+            </div>
+            <div class="stat-card">
+                <h4>Today's Bookings</h4>
+                <span id="today-bookings">0</span>
+            </div>
+            <div class="stat-card">
+                <h4>This Week</h4>
+                <span id="week-bookings">0</span>
+            </div>
+        </div>
+
+        <div class="admin-actions">
+            <button onclick="viewAllBookings()" class="btn">View All Bookings</button>
+            <button onclick="exportBookings()" class="btn">Export Data</button>
+        </div>
+
+        <!-- All Bookings Table -->
+        <div id="admin-bookings-section" class="hidden">
+            <h3>All Bookings</h3>
+            <table id="admin-bookings-table">
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Email</th>
+                        <th>Court</th>
+                        <th>Date</th>
+                        <th>Start Time</th>
+                        <th>End Time</th> <!-- new -->
+                        <th>Duration</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="./booking.js"></script>
+</body>
+
+</html>

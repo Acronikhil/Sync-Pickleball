@@ -344,12 +344,12 @@ footer {
 }
 
 footer a {
-    color: #ff5722;
+    color: #d7afff;
     transition: color 0.3s;
 }
 
 footer a:hover {
-    color: #fff;
+    color: #fa92fa;
 }
 
 /* === Responsive Adjustments === */
@@ -459,25 +459,74 @@ footer a:hover {
 
 #pickleball,
 #pickleball-shadow {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 25px;
-  pointer-events: none;
-  z-index: -1;
-  opacity: 0.5;
-  filter: blur(4px) brightness(1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25px;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.5;
+    filter: blur(4px) brightness(1);
 }
 
 #pickleball-shadow {
-  filter: blur(15px) brightness(0.5); /* dark blurry shadow */
-  /* transform: scale(1.1); */
-  z-index: -2; /* behind the ball */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%) scale(1.1); /* Adjust position */
+    filter: blur(15px) brightness(0.5);
+    /* dark blurry shadow */
+    /* transform: scale(1.1); */
+    z-index: -2;
+    /* behind the ball */
+    left: 50%;
+    /* Center horizontally */
+    transform: translateX(-50%) scale(1.1);
+    /* Adjust position */
 
 }
 
-section{
+section {
     max-width: 100%;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+/* Overlay content */
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 40px 10px;
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 34px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.close-btn:hover {
+    color: #ff6b6b;
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
 }

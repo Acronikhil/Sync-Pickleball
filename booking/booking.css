@@ -1,0 +1,365 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #825CFF;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    background: #fff;
+    padding: 25px;
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.containerAd {
+    width: 90%;
+    max-width: 500px;
+    background: #fff;
+    padding: 25px;
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+.date-picker, .court-picker {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.date-picker label, .court-picker label {
+    font-size: 16px;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.date-picker input, .court-picker select {
+    font-family: 'Poppins', sans-serif;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    width: 100%;
+    max-width: 200px;
+}
+
+.time-slot-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.time-slot {
+    padding: 12px 18px;
+    border-radius: 8px;
+    background: #e0e7ff;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-size: 14px;
+    position: relative;
+}
+
+.time-slot:hover {
+    background: #c7d2fe;
+    transform: scale(1.05);
+}
+
+.time-slot.booked {
+    background: #ffd6d6;
+    color: #b91c1c;
+    cursor: not-allowed;
+}
+
+.time-slot.selected {
+    background: #825CFF;
+    color: #fff;
+}
+
+.booked-slots-container {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.booked-slots-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.booked-slots-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.booked-slots-container th, .booked-slots-container td {
+    padding: 12px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.booked-slots-container th {
+    background-color: #825CFF;
+    color: white;
+    font-weight: 600;
+}
+
+.booked-slots-container .booked {
+    background-color: #ffd6d6;
+    color: #b91c1c;
+}
+
+.booked-slots-container .available {
+    background-color: #e0e7ff;
+    color: #333;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.modal-content input {
+    width: 90%;
+    padding: 10px ;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.modal-buttons {
+    margin-top: 20px;
+}
+
+/* Button Styles */
+.btn {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    background: #825CFF;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.btn.cancel {
+    background: #ff6b6b;
+}
+
+.btn.small {
+    padding: 5px 10px;
+    font-size: 12px;
+    margin: 2px;
+}
+
+.btn.admin-btn {
+    background: #28a745;
+}
+
+/* Admin Dashboard Styles */
+.admin-dashboard {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.admin-dashboard h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.admin-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    min-width: 120px;
+    margin: 5px;
+}
+
+.stat-card h4 {
+    margin: 0 0 10px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.stat-card span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #825CFF;
+}
+
+.admin-actions {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#admin-bookings-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+#admin-bookings-table th,
+#admin-bookings-table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+#admin-bookings-table th {
+    background-color: #825CFF;
+    color: white;
+    font-weight: 600;
+}
+
+/* Tooltip */
+.time-slot[data-tooltip]:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 1000;
+}
+
+/* Notification */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+.notification.success {
+    background: #4CAF50;
+}
+
+.notification.error {
+    background: #f44336;
+}
+
+.notification.info {
+    background: #2196F3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .time-slot {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .admin-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-card {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    #admin-bookings-table {
+        font-size: 10px;
+    }
+
+    #admin-bookings-table th,
+    #admin-bookings-table td {
+        padding: 4px;
+    }
+}
+
+/* Hidden utility class */
+.hidden {
+    display: none !important;
+}
