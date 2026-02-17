@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const row = document.createElement("tr");
 
                 const dateCell = document.createElement("td");
-                dateCell.textContent = booking.date;
+                dateCell.textContent = booking.bookingDate;
                 row.appendChild(dateCell);
 
                 const courtCell = document.createElement("td");
