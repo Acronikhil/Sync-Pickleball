@@ -564,3 +564,7 @@ iframe {
     transform: scale(1.2);
     transition: all 0.3s ease-in-out;
 }
+
+.content {
+    margin-bottom: 10px !important;
+}
