@@ -353,7 +353,7 @@ footer a:hover {
 }
 
 /* === Responsive Adjustments === */
-@media (max-width: 576px) {
+/* @media (max-width: 576px) {
     .hero h1 {
         font-size: 2.5rem;
     }
@@ -361,7 +361,7 @@ footer a:hover {
     .logo-strip img {
         height: 40px;
     }
-}
+} */
 
 .overlay {
     position: fixed;
@@ -389,6 +389,10 @@ footer a:hover {
 
 .card-3d {
     perspective: 1000px;
+}
+
+.card-title .card-title{
+    padding-top: 0% !important;
 }
 
 .card-inner {
@@ -436,6 +440,27 @@ footer a:hover {
         padding-top: 1.5rem !important;
         /* Adds gap above */
     }
+    
+}
+
+@media (max-width: 370px) {
+    .heading{
+        font-size: 20px !important;
+    }
+    h1 {
+    /* color: #f3f3f3a1; */
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.175rem;
+    width: 100%;
+    font-size: 1.5em;
+    line-height: 1.125;
+    font-weight: 500;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.412) 0%, #FFFFFF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+    
 }
 
 @media (max-width: 767px) {
