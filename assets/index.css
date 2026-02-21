@@ -202,7 +202,7 @@ a {
 section {
     padding-top: 4rem;
     padding-bottom: 4rem;
-    margin-top: 6rem;
+    margin-top: 3rem;
 }
 
 h1 {
@@ -443,23 +443,32 @@ footer a:hover {
     
 }
 
-@media (max-width: 370px) {
-    .heading{
-        font-size: 20px !important;
-    }
+@media (max-width: 400px) {
+    
     h1 {
-    /* color: #f3f3f3a1; */
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: -0.175rem;
-    width: 100%;
-    font-size: 1.5em;
-    line-height: 1.125;
-    font-weight: 500;
-    background: linear-gradient(45deg, rgba(255, 255, 255, 0.412) 0%, #FFFFFF 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+            /* color: #f3f3f3a1; */
+            
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: -0.175rem;
+            width: 98%;
+            font-size: 2.0em !important;
+            line-height: 1.125;
+            font-weight: 500;
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.412) 0%, #FFFFFF 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    
+        .sync-logo {
+            max-width: 150px !important;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    
+        section {
+            margin-top: 10px !important;
+        }
     
 }
 
