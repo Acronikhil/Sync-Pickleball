@@ -338,7 +338,7 @@ p {
 
 /* === Footer === */
 footer {
-    background-color: #00000011;
+    background-color: #0000001f;
     color: #ccc;
     padding: 3rem 0;
 }
@@ -413,10 +413,45 @@ footer a:hover {
     transform: scale(1.1);
 }
 
+.img-fluid{
+    width: 100%;
+  height: auto;
+  transition: transform 0.4s ease; 
+}
+.img-fluid:hover{
+    transform: scale(1.1);
+}
 @media (max-width: 767.98px) {
     .responsive-img {
         max-height: 250px;
     }
+    .img-fluid{
+        /* overflow-wrap: break-word; */
+        border-radius: 0 !important;
+        padding: 0px !important;
+        transform: scale(1.1);
+    }
+    .glow-card{
+        /* padding: 0px; */
+        /* padding-bottom: 0px; */
+        overflow: hidden;
+    }
+    .btn{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .button-grp-parent{
+        margin-top: 10px;
+    }
+    .button-grp{
+        margin: 0px;
+    }
+
+    footer{
+        margin-top: 20px !important;
+    }
+
 }
 
 @media (min-width: 768px) {
